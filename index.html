@@ -1,1 +1,655 @@
-<!DOCTYPE html> <html> <head> ООО «Коллективный Разум» </title> </head> <body>   ООО «Коллективный Разум» </body> </html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хранители Земли - Потребительский социально-экологический кооператив</title>
+    <meta name="description" content="Официальный сайт потребительского социально-экологического кооператива 'Хранители Земли'. Создаем экосообщества полного цикла для гармоничной жизни в согласии с природой.">
+    <meta name="keywords" content="хранители земли, экокооператив, устойчивое развитие, экосообщества, экологическая ответственность">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://telegram-group.cil.by">
+    <meta property="og:title" content="Хранители Земли - Экокооператив">
+    <meta property="og:description" content="Создаем будущее в гармонии с природой через экосообщества полного цикла">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://telegram-group.cil.by">
+    <meta property="twitter:title" content="Хранители Земли - Экокооператив">
+    <meta property="twitter:description" content="Создаем будущее в гармонии с природой через экосообщества полного цикла">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-green: #2d5016;
+            --secondary-green: #4a7c2e;
+            --accent-green: #8fbc8f;
+            --light-green: #e8f5e8;
+            --text-dark: #2c3e50;
+            --text-light: #6c757d;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            color: var(--white);
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: rgba(45, 80, 22, 0.95);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo::before {
+            content: "🌍";
+            font-size: 1.8rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(143, 188, 143, 0.3), rgba(74, 124, 46, 0.3)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%234a7c2e" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,133.3C960,128,1056,96,1152,90.7C1248,85,1344,107,1392,117.3L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>') no-repeat center;
+            background-size: cover;
+            position: relative;
+        }
+        
+        .hero-content {
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-green);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Buttons */
+        .btn-primary, .btn-secondary {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 0.5rem;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--secondary-green), var(--primary-green));
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-green);
+            border: 2px solid var(--secondary-green);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--light-green);
+            transform: translateY(-2px);
+        }
+        
+        /* Sections */
+        .section {
+            padding: 80px 0;
+            background: var(--white);
+            margin: 2rem 0;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+        
+        .section:nth-child(even) {
+            background: linear-gradient(135deg, var(--light-green), var(--white));
+        }
+        
+        .section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary-green);
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .section h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--secondary-green), var(--accent-green));
+            border-radius: 2px;
+        }
+        
+        /* Feature Grid */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary-green), var(--accent-green));
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+        
+        .about-image {
+            background: linear-gradient(135deg, var(--accent-green), var(--secondary-green));
+            height: 400px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-image::before {
+            content: "🌱";
+            position: absolute;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Contact Section */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--light-green), var(--white));
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+        
+        .contact-item h4 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item .icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary-green);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--accent-green);
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            opacity: 1;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .section h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Loading Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav class="container">
+            <div class="logo">Хранители Земли</div>
+            <ul class="nav-links">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#mission">Миссия</a></li>
+                <li><a href="#activities">Деятельность</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Хранители Земли</h1>
+                <p class="subtitle">Потребительский социально-экологический кооператив<br>
+                Создаем экосообщества полного цикла в гармонии с природой</p>
+                <div class="hero-buttons">
+                    <a href="#mission" class="btn-primary">Наши ценности</a>
+                    <a href="constitution.md" class="btn-secondary">Конституция</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section fade-in">
+        <div class="container">
+            <h2>О кооперативе</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p><strong>Потребительский социально-экологический кооператив «Хранители Земли»</strong> создан 3 июля 2025 года для формирования самообеспечивающихся экосообществ полного цикла.</p>
+                    <p>Мы объединяем людей, которые стремятся жить в гармонии с природой, используя современные технологии для создания устойчивых экологических поселений.</p>
+                    <p>Наша деятельность основана на принципах кооперативного движения, экологической ответственности и духовного развития.</p>
+                </div>
+                <div class="about-image"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="section fade-in">
+        <div class="container">
+            <h2>Миссия и ценности</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Экологическая ответственность</h3>
+                    <p>Минимизация воздействия на природу, принцип цикличности, поддержка биоразнообразия</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Кооперативные принципы</h3>
+                    <p>Демократическое управление, взаимопомощь, открытость и доступность информации</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌱</div>
+                    <h3>Устойчивое развитие</h3>
+                    <p>Создание самообеспечивающихся сообществ с полным циклом ресурсов</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Образование</h3>
+                    <p>Повышение осведомленности об экологии, обучение устойчивым практикам</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌿</div>
+                    <h3>Гармония с природой</h3>
+                    <p>Воссоединение с природой, образ жизни с низким экологическим следом</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏛️</div>
+                    <h3>Социальная справедливость</h3>
+                    <p>Корпоративная социальная ответственность, поддержка сообщества</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="section fade-in">
+        <div class="container">
+            <h2>Основные направления деятельности</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">🏪</div>
+                    <h3>Торговля и питание</h3>
+                    <p>Организация оптовой и розничной торговли, общественного питания</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚜</div>
+                    <h3>Сельское хозяйство</h3>
+                    <p>Производство экопродукции, закупка сельхозпродукции у местных производителей</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏘️</div>
+                    <h3>Экопоселения</h3>
+                    <p>Создание экодеревень и автономных поселений полного цикла</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Образование</h3>
+                    <p>Создание образовательных учреждений, подготовка специалистов</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏥</div>
+                    <h3>Оздоровление</h3>
+                    <p>Разработка санаторно-курортных и оздоровительных организаций</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💼</div>
+                    <h3>Инновации</h3>
+                    <p>Создание венчурных фондов, бизнес-инкубаторов и акселераторов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section fade-in">
+        <div class="container">
+            <h2>Контакты</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="icon">📍</div>
+                    <h4>Адрес</h4>
+                    <p>г. Минск<br>ул. Литературная 22<br>помещение 145</p>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">🌐</div>
+                    <h4>Онлайн</h4>
+                    <p>Telegram группа:<br>ООО «Коллективный Разум»</p>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">📋</div>
+                    <h4>Документы</h4>
+                    <p><a href="constitution.md">Конституция проекта</a><br>
+                    Полный устав кооператива</p>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">🤝</div>
+                    <h4>Членство</h4>
+                    <p>Для вступления в кооператив:<br>Обратитесь в Правление<br>Укажите цель вступления</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>О кооперативе</h3>
+                    <ul>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#mission">Миссия</a></li>
+                        <li><a href="constitution.md">Конституция</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Деятельность</h3>
+                    <ul>
+                        <li><a href="#activities">Направления</a></li>
+                        <li><a href="#activities">Проекты</a></li>
+                        <li><a href="#contact">Партнерство</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Управление</h3>
+                    <ul>
+                        <li>Общее собрание</li>
+                        <li>Правление</li>
+                        <li>Ревизионная комиссия</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>📍 Минск, ул. Литературная 22</li>
+                        <li>🌐 telegram-group.cil.by</li>
+                        <li>🤝 ООО «Коллективный Разум»</li>
+                    </ul>
+                </div>
+            </div>
+            <p>&copy; 2025 Потребительский социально-экологический кооператив «Хранители Земли»</p>
+            <p>«Мы не унаследовали Землю от предков, а взяли ее взаймы у детей»</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(45, 80, 22, 0.98)';
+            } else {
+                header.style.background = 'rgba(45, 80, 22, 0.95)';
+            }
+        });
+
+        // Add hover effects to feature cards
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
